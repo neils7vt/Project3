@@ -16,6 +16,16 @@ def countFiles(dir, counter = 0):
             counter += 1
     return "Number of files in the directory: " + dir + ":" + str(counter)
 
+def findPermissions(dir):
+    #Function to find the permissions of all files in a given directory
+    for root, directories, files in os.walk(dir):
+        for filename in files:
+            #This combines the two strings to get the full file path
+            filepath = os.path.join(root, filename)
+            #Gets that status of every file in the directory
+            status = os.stat(filepath)
+            #This prints the file permissions of all files in the directory
+            print("File Permissions: " + filepath + " is: ",oct(status.st_mode)[-3:])
 
 user_input = input("Do you want to play the game?")
 
@@ -29,7 +39,8 @@ while user_input == 'True':
     print("Please choose one of the options listed below: ")
     print("1. List the files present in a given directory and all subdirectories")
     print("2. Find the total number of files in a given directory and all subdirectories")
-
+    print("3. Find the permissions of each file in the given directory and all subdirectories")
+    print("4. Change the permissions of a given file")
 
     user_selection = input("Please select an option: ")
     
@@ -51,9 +62,14 @@ while user_input == 'True':
             testdir = currdir
             print("You did not enter any value, using the current directory to list file count")
         print(countFiles(testdir))
-
-
-
+    elif user_selection == '3':
+        testdir = input("Please enter the directory in which you want to find the permissions of all files in: ")
+        if not os.path.isdir(testdir):
+            print(testdir, 'This folder could not be found.')
+        elif testdir == '':
+            testdir = currdir
+            print("You did not enter any value, using the current directory to list file count")
+        print(findPermissions(testdir))
     else:
          print("Not a valid selection")
     user_input = input("Do you want to continue?")
