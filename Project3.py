@@ -9,6 +9,12 @@ def get_files(dir):
             file_path = os.path.join(root, filename)
             print (file_path)
 
+def countFiles(dir, counter = 0):
+    #Function to return the number of files in a given directory and subdirectories
+    for pack in os.walk(dir):
+        for f in pack[2]:
+            counter += 1
+    return "Number of files in the directory: " + dir + ":" + str(counter)
 
 
 user_input = input("Do you want to play the game?")
@@ -35,6 +41,14 @@ while user_input == 'True':
             print("You did not enter any value, using the current directory to list files")
 
         get_files(testdir)
+    elif user_selection == '2':
+        testdir = input("Please enter the full path of the directory to find the file count of: ")
+        if testdir == '':
+            testdir = currdir
+            print("You did not enter any value, using the current directory to list file count")
+        print(countFiles(testdir))
+
+
 
     else:
          print("Not a valid selection")
