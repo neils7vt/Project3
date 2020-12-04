@@ -14,12 +14,12 @@ def get_files(dir):
 user_input = input("Do you want to play the game?")
 
 if user_input in ('YES', 'Yes', 'yes', 'yeah', 'Yeah', 'y', 'Y'):
-    user_option = 'True'
+    user_input = 'True'
 
 #This returns the current working directory
 currdir = os.getcwd()
 
-while user_option == 'True':
+while user_input == 'True':
     print("Please choose one of the options listed below: ")
     print("1. List the files present in a given directory and all subdirectories")
     print("2. Find the total number of files in a given directory and all subdirectories")
@@ -40,7 +40,7 @@ while user_option == 'True':
          print("Not a valid selection")
     user_input = input("Do you want to continue?")
     if user_input in ('YES', 'Yes', 'yes', 'yeah', 'Yeah', 'y', 'Y'):
-        user_option = 'True'
+        user_input = 'True'
     else:
         print("Thank you for playing the game")
 
