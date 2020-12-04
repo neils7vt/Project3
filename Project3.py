@@ -36,14 +36,18 @@ while user_input == 'True':
     if user_selection == '1': 
 
         testdir = input("Please enter the full path of the directory you want to list the files of: ")
-        if testdir == '':
+        if not os.path.isdir(testdir):
+            print(testdir, 'This folder could not be found.')
+        elif testdir == '':
             testdir = currdir
             print("You did not enter any value, using the current directory to list files")
 
         get_files(testdir)
     elif user_selection == '2':
         testdir = input("Please enter the full path of the directory to find the file count of: ")
-        if testdir == '':
+        if not os.path.isdir(testdir):
+            print(testdir, 'This folder could not be found.')
+        elif testdir == '':
             testdir = currdir
             print("You did not enter any value, using the current directory to list file count")
         print(countFiles(testdir))
