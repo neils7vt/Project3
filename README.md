@@ -17,7 +17,8 @@
 #    Cases: No entry: Finds the permissions of the files of the current working directory and all subdirectories
 #           Invalid directory: Message indicating invalid directory and prompt user if they want to continue the game.
 #
-# 4. Change the permissions of a file. User is asked to enter the 3-digit code to change the permissions of the file ex: '777'. After changing file permissions, call 'ls' to list #    the file and its new permissions Requires a full path to work correctly. Ex: home/neils7/projects/project3.txt
+# 4. Change the permissions of a file. User is asked to enter the 3-digit code to change the permissions of the file ex: '777'. After changing file permissions, call 'ls' to list
+#    the file and its new permissions Requires a full path to work correctly. Ex: home/neils7/projects/project3.txt
 #    Cases: No entry: Display error message and ask user if they want to continue the game.
 #           Invalid file (file not found): Message indicating invalid file and prompt user if they want to continue the game.
 #
