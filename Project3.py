@@ -140,11 +140,11 @@ while user_input == 'True':
         if testdir == '':
             testdir = currdir
             print("You did not enter any value, using the current directory to list file count")
-            print(findPermissions(testdir))
+            findPermissions(testdir)
         elif not os.path.isdir(testdir):
             print(testdir, 'This folder could not be found.')
         else:
-            print(findPermissions(testdir))
+            findPermissions(testdir)
 
 
     elif user_selection == '4':
@@ -205,11 +205,11 @@ while user_input == 'True':
         if dirName == '':
             dirName = currdir
             print("You did not enter any value, using the current directory to search for files greater than given size")
-            print(getFileSize(dirName, fileSize))
+            getFileSize(dirName, fileSize)
         if not os.path.isdir(dirName):
             print("The directory could not be found")
         else:
-            print(getFileSize(dirName, fileSize))
+            getFileSize(dirName, fileSize)
         
 
     else:
