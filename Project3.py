@@ -2,6 +2,7 @@
 import os
 import subprocess
 
+
 def get_files(dir):
     #Function to get the list of all files in a given directory and its subdirectories
     for path1, dirs, files in os.walk(dir):
@@ -11,12 +12,14 @@ def get_files(dir):
             print (file_path)
 
 
+
 def countFiles(dir, counter = 0):
     #Function to return the number of files in a given directory and subdirectories
     for list1 in os.walk(dir):
         for f in list1[2]:
             counter += 1
     return "Number of files in the directory: " + dir + ":" + str(counter)
+
 
 
 def findPermissions(dir):
@@ -29,6 +32,7 @@ def findPermissions(dir):
             status = os.stat(filepath)
             #This prints the file permissions of all files in the directory
             print("File Permissions: " + filepath + " is: ",oct(status.st_mode)[-3:])
+
 
 
 def searchWordinFile(searchword, filename):
@@ -46,6 +50,7 @@ def searchWordinFile(searchword, filename):
     return matches
 
 
+
 def getFileExtensions(dirName, fileExtension):
     #Function to find all files of the given extension type in a directory and all its subdirectories
     numFiles = 0
@@ -55,6 +60,20 @@ def getFileExtensions(dirName, fileExtension):
                 numFiles += 1
         print("The number of files in the " + list1[0] + " directory with a " + fileExtension + " extension are " + str(numFiles))
         numFiles = 0
+
+
+def getFileSize(dir, size):
+    #Function to find all files greater than a given size in a directory and all subdirectories
+    for path1, dirs, files in os.walk(dir):
+        for filename in files:
+            #This combines the two strings to get the full file path
+            filepath = os.path.join(path1, filename)
+            #Gets that status of every file in the directory
+            status = os.stat(filepath)
+            if status.st_size > size:
+                #This prints the size of each file that is greater than the given size
+                print("File size of: " + filepath + " in bytes is: ",status.st_size)
+
 
 user_input = input("Do you want to play the game? ")
 
@@ -177,13 +196,20 @@ while user_input == 'True':
             print("The directory could not be found")
         else:
             getFileExtensions(dirName, fileExtension)
-            
 
 
 
-
-    
-
+    elif user_selection == '8':
+        dirName = input("Please enter the directory name you want to search for files greater than a given size: ")
+        fileSize = int(input("Please enter the file size in bytes you want to search for files larger than (ex: 100): "))
+        if dirName == '':
+            dirName = currdir
+            print("You did not enter any value, using the current directory to search for files greater than given size")
+            print(getFileSize(dirName, fileSize))
+        if not os.path.isdir(dirName):
+            print("The directory could not be found")
+        else:
+            print(getFileSize(dirName, fileSize))
         
 
     else:
