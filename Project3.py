@@ -141,6 +141,20 @@ while user_input == 'True':
             for search_words in numLines:
                 print(searchWord, " appears in line number = ", search_words[0], " and Line = ", search_words[1])
 
+
+
+    elif user_selection == '6':
+        oldFile, newFile = input("Please enter the file to rename followed by a space and then the new file name: ").split()
+        if not os.path.isfile(oldFile):
+            print(oldFile, 'This file could not be found.')
+        else:
+            os.rename(oldFile, newFile)
+            print("Below is the new file information: ")
+            subprocess.call(["ls", "-l", newFile])
+
+
+    
+
         
 
     else:
