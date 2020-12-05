@@ -1,4 +1,4 @@
-#! /bin/usr/python3
+#! /usr/bin/python3
 import os
 import subprocess
 
@@ -45,16 +45,27 @@ while user_input == 'True':
 
     user_selection = input("Please select an option: ")
     
+   
+
     if user_selection == '1': 
 
         testdir = input("Please enter the full path of the directory you want to list the files of: ")
-        if not os.path.isdir(testdir):
-            print(testdir, 'This folder could not be found.')
-        elif testdir == '':
+
+        if testdir == '':
             testdir = currdir
             print("You did not enter any value, using the current directory to list files")
 
-        get_files(testdir)
+            get_files(testdir)
+
+        elif not os.path.isdir(testdir):
+            print(testdir, 'This folder could not be found.')
+
+        else:
+            get_files(testdir)
+
+
+
+
     elif user_selection == '2':
         testdir = input("Please enter the full path of the directory to find the file count of: ")
         if not os.path.isdir(testdir):
@@ -63,7 +74,9 @@ while user_input == 'True':
             testdir = currdir
             print("You did not enter any value, using the current directory to list file count")
         print(countFiles(testdir))
-    elif user_selection == '3':
+   
+
+   elif user_selection == '3':
         testdir = input("Please enter the directory in which you want to find the permissions of all files in: ")
         if not os.path.isdir(testdir):
             print(testdir, 'This folder could not be found.')
@@ -71,7 +84,10 @@ while user_input == 'True':
             testdir = currdir
             print("You did not enter any value, using the current directory to list file count")
         print(findPermissions(testdir))
-    elif user_selection == '4':
+   
+
+
+   elif user_selection == '4':
         testFile = input("Please enter the file name (including the fullpath) that you want to change the permissions of: ")
         if not os.path.isfile(testFile):
             print(testFile, 'This file could not be found.')
