@@ -1,5 +1,6 @@
 #! /bin/usr/python3
 import os
+import subprocess
 
 def get_files(dir):
     #Function to get the list of all files in a given directory and its subdirectories
@@ -70,6 +71,18 @@ while user_input == 'True':
             testdir = currdir
             print("You did not enter any value, using the current directory to list file count")
         print(findPermissions(testdir))
+    elif user_selection == '4':
+        testFile = input("Please enter the file name (including the fullpath) that you want to change the permissions of: ")
+        if not os.path.isfile(testFile):
+            print(testFile, 'This file could not be found.')
+        else:
+            status = os.stat(testFile)
+            print("Current File Permissions of " + testFile + " are",oct(status.st_mode)[-3:])
+            new_Perm = str(input("Please enter the new permissions you want to apply in octal form: ex.: 777: "))
+            os.chmod(testFile, int(new_Perm, 8))
+            status = os.stat(testFile)
+            print("New File Permissions of " + testFile + " are",oct(status.st_mode)[-3:])
+            subprocess.call(["ls","-l",testFile])
     else:
          print("Not a valid selection")
     user_input = input("Do you want to continue?")
