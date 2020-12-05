@@ -46,8 +46,17 @@ def searchWordinFile(searchword, filename):
     return matches
 
 
+def getFileExtensions(dirName, fileExtension):
+    #Function to find all files of the given extension type in a directory and all its subdirectories
+    numFiles = 0
+    for list1 in os.walk(dirName):
+        for file_name in list1[2]:
+            if file_name.endswith(fileExtension):
+                numFiles += 1
+        print("The number of files in the " + list1[0] + " directory with a " + fileExtension + " extension are " + str(numFiles))
+        numFiles = 0
 
-user_input = input("Do you want to play the game?")
+user_input = input("Do you want to play the game? ")
 
 
 if user_input in ('YES', 'Yes', 'yes', 'yeah', 'Yeah', 'y', 'Y'):
@@ -66,6 +75,9 @@ while user_input == 'True':
     print("4. Change the permissions of a given file")
     print("5. Search for a given word in a file")
     print("6. Rename a given file")
+    print("7. Find the number of files with a given extension in a  directory and all its subdirectories")
+    print("8. Find the files that are greater than a given size  in a  directory and all its subdirectories")
+
 
 
     user_selection = input("Please select an option: ")
@@ -151,6 +163,23 @@ while user_input == 'True':
             os.rename(oldFile, newFile)
             print("Below is the new file information: ")
             subprocess.call(["ls", "-l", newFile])
+
+
+
+    elif user_selection == '7':
+        dirName = input("Please enter the directory name you want to search for the file extension type in: ")
+        fileExtension = input("Please enter the file extension type you want to search for (ex: .txt): ")
+        if dirName == '':
+            dirName = currdir
+            print("You did not enter any value, using the current directory to search for file extension type")
+            getFileExtensions(dirName, fileExtension)
+        if not os.path.isdir(dirName):
+            print("The directory could not be found")
+        else:
+            getFileExtensions(dirName, fileExtension)
+            
+
+
 
 
     
