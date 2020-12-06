@@ -1,7 +1,6 @@
 # Project3
 
-# My program is a game that allows the user to perform a set of Linux Administration and search within file tasks based on their 
-# selection out of 8 options.
+# My program is a game that allows the user to perform a set of Linux Administration and search within file tasks based on their selection out of 8 options.
 # 
 # I run my program using the following: python3 Project3.py
 #
