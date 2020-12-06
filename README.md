@@ -37,8 +37,7 @@
 #           Invalid directory: Message indicating invalid directory and prompt user if they want to continue the game. If "yes" is entered, display menu of options again. 
 #
 #
-# 8. Find the number of files greater than a user-inputed size in bytes in a directory and all its subdirectories. The user is asked to give the full path of the directory to 
-#    search within. Then, the user is asked to enter the file size in bytes that they wish to search for files greater than (ex: 100). All files that meet the requirement are        listed and their file size is displayed.
+# 8. Find the number of files greater than a user-inputed size in bytes in a directory and all its subdirectories. The user is asked to give the full path of the directory to        search within. Then, the user is asked to enter the file size in bytes that they wish to search for files greater than (ex: 100). All files that meet the requirement are        listed and their file size is displayed.
 #    Cases: No entry (just enter pressed) for directory prompt: Search in current directory
 #           Invalid directory: Message indicating invalid directory and prompt user if they want to continue the game. If "yes" is entered, display menu of options again. 
 #
