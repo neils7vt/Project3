@@ -47,5 +47,5 @@
 #           Invalid directory: Message indicating invalid directory and prompt user if they want to continue the game. If "yes" is entered, display menu of options again. 
 #
 #
-# For any "continue prompt" case, if anything other than 'yes', 'y', 'Y', 'Yeah', 'yeah', or 'YES' is entered, a thank you message is displayed to the terminal and the program   # ends.
+# For any "continue prompt" case, if anything other than 'yes', 'y', 'Y', 'Yeah', 'yeah', or 'YES' is entered, a thank you message is displayed to the terminal and the program ends.
 
