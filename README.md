@@ -18,7 +18,7 @@
 #    Cases: No entry given (just enter pressed): Count the number of files in the current working directory and all subdirectories, display to user the count.
 #           Invalid directory: Message indicating invalid directory and prompt user if they want to continue the game. If "yes" is entered, display menu of options again. 
 #
-# 3. Find the permissions of all files in a directory and all its subdirectories. Lists permissions of all files in a list, using their 3-digit permissions value. Requires a     #    full path. Ex: home/neils7/projects
+# 3. Find the permissions of all files in a directory and all its subdirectories. Lists permissions of all files in a list, using their 3-digit permissions value. Requires a          full path. Ex: home/neils7/projects
 #    Cases: No entry (just enter pressed): Finds the permissions of the files in the current working directory and all subdirectories.
 #           Invalid directory: Message indicating invalid directory and prompt user if they want to continue the game. If "yes" is entered, display menu of options again. 
 #
