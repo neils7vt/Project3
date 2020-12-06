@@ -3,7 +3,7 @@
 # My program is a game that allows the user to perform a set of Linux Administration and search within file tasks based on their selection out of 8 options.
 # 
 # Due to the simple nature of my initial project proposal of searching a file for words/sentences, I added 7 more options to my project to better cover several Linux               Administation tasks and use more linux os commands in python code.
-# I run my program using the following: python3 Project3.py
+# I run my program using the following: python3 Project3.py, or: python3 /fullpath/Project3.py
 #
 # A message is displayed to the user: "Do you want to play the game?" Enter yes to play (multiple user input variations covered), or no if not (program ends).
 #
