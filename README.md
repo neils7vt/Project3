@@ -26,11 +26,11 @@
 #    /home/neils7/file1.txt ). If the file is in the current directory, simply type the file name (file1.txt). The current permissions of the file are displayed. Then, user is
 #    asked to enter the 3-digit code for the new permissions of the file ex: '777'. After changing the files permissions, the file and its new permissions are listed.
 #    Cases: No entry (prompt for file): Display error message and ask user if they want to continue the game.
-#           Invalid file (prompt for file) (file not found): Message indicating invalid file and prompt user if they want to continue the game. If "yes" is entered, display menu #                                                            of options again. 
-# 
-# 5. Search for a user-inputed word in a given file. User is asked to enter a word to search for, followed by a space, and then the full path of the file to search for the word #    in (ex: print /home/neils7/Project3.py). If the file is in the current directory, simply enter the file name with the extension rather than the full path. The total number #    of occurences of the word is displayed as well as the list of lines that contain the given word.
+#           Invalid file (prompt for file) (file not found): Message indicating invalid file and prompt user if they want to continue the game. If "yes" is entered, display menu                                                              of options again. 
+
+# 5. Search for a user-inputed word in a given file. User is asked to enter a word to search for, followed by a space, and then the full path of the file to search for the word     in (ex: print /home/neils7/Project3.py). If the file is in the current directory, simply enter the file name with the extension rather than the full path. The total number #     of occurences of the word is displayed as well as the list of lines that contain the given word.
 #    Cases: Invalid file (file not found): Message indicating invalid file and prompt user if they want to continue the game.
-#
+
 # 6. Rename a file. The user is asked to give the name of the file they wish to rename, followed by a space, followed by the new file name. (include extension). Full path of     #    both file names is required if not in current directory. New file name is displayed.
 #    Cases: Invalid file (file not found): Message indicating invalid file and prompt user if they want to continue the game.
 #
