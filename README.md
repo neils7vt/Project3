@@ -22,9 +22,7 @@
 #    Cases: No entry (just enter pressed): Finds the permissions of the files in the current working directory and all subdirectories.
 #           Invalid directory: Message indicating invalid directory and prompt user if they want to continue the game. If "yes" is entered, display menu of options again. 
 #
-# 4. Change the permissions of a file. User is asked for the file they wish to change the permissions of (if file is not in current directory, enter full path ex: 
-#    /home/neils7/file1.txt ). If the file is in the current directory, simply type the file name (file1.txt). The current permissions of the file are displayed. Then, user is
-#    asked to enter the 3-digit code for the new permissions of the file ex: '777'. After changing the files permissions, the file and its new permissions are listed.
+# 4. Change the permissions of a file. User is asked for the file they wish to change the permissions of (if file is not in current directory, enter full path ex: /home/neils7/file1.txt ). If the file is in the current directory, simply type the file name (file1.txt). The current permissions of the file are displayed. Then, user is asked to enter the 3-digit code for the new permissions of the file ex: '777'. After changing the files permissions, the file and its new permissions are listed.
 #    Cases: No entry (prompt for file): Display error message and ask user if they want to continue the game.
 #           Invalid file (prompt for file) (file not found): Message indicating invalid file and prompt user if they want to continue the game. If "yes" is entered, display menu of options again. 
 
@@ -40,8 +38,7 @@
 #
 #
 # 8. Find the number of files greater than a user-inputed size in bytes in a directory and all its subdirectories. The user is asked to give the full path of the directory to 
-#    search within. Then, the user is asked to enter the file size in bytes that they wish to search for files greater than (ex: 100). All files that meet the requirement are 
-#    listed and their file size is displayed.
+#    search within. Then, the user is asked to enter the file size in bytes that they wish to search for files greater than (ex: 100). All files that meet the requirement are        listed and their file size is displayed.
 #    Cases: No entry (just enter pressed) for directory prompt: Search in current directory
 #           Invalid directory: Message indicating invalid directory and prompt user if they want to continue the game. If "yes" is entered, display menu of options again. 
 #
