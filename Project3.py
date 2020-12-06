@@ -75,7 +75,7 @@ def getFileSize(dir, size):
                 print("File size of: " + filepath + " in bytes is: ",status.st_size)
 
 
-user_input = input("Do you want to play the game? ")
+user_input = input("Do you want to play the game? Enter 'yes' or 'no': ")
 
 
 if user_input in ('YES', 'Yes', 'yes', 'yeah', 'Yeah', 'y', 'Y'):
@@ -213,12 +213,12 @@ while user_input == 'True':
         
 
     else:
-         print("Not a valid selection")
-    user_input = input("Do you want to continue?")
+         print("Not a valid selection ")
+    user_input = input("Do you want to continue? ")
     if user_input in ('YES', 'Yes', 'yes', 'yeah', 'Yeah', 'y', 'Y'):
         user_input = 'True'
     else:
-        print("Thank you for playing the game")
+        print("Thank you for playing the game!")
 
         
 
