@@ -2,6 +2,8 @@
 import os
 import subprocess
 
+#Game that allows user to test multiple Linux Administration tasks and search within file commands.
+
 
 def get_files(dir):
     #Function to get the list of all files in a given directory and its subdirectories
