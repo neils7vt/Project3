@@ -7,7 +7,7 @@
 #
 # A message is displayed to the user: "Do you want to play the game?" Enter yes to play (multiple user input variations covered), or no if not (program ends).
 #
-# A menu of options is displayed to the user, enter in just the number of the option to select one.
+# A menu of options is displayed to the user, enter in just the number of the option to select one. If invalid option selected, display error message and ask to continue or not.
 #
 # Options:
 #
