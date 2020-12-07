@@ -30,7 +30,7 @@
 # 5. Search for a user-inputed word in a given file. User is asked to enter a word to search for, followed by a space, and then the full path of the file to search for the word     in (ex: print /home/neils7/Project3.py). If the file is in the current directory, simply enter the file name with the extension rather than the full path. The total number       of occurences of the word is displayed as well as the list of lines that contain the given word.
 #    Cases: Invalid file (file not found): Message indicating invalid file and prompt user if they want to continue the game.
 
-# 6. Rename a file. The user is asked to give the name of the file they wish to rename, followed by a space, followed by the new file name. (include extension). Full path of          both file names is required if not in current directory. New file name is displayed.
+# 6. Rename a file. The user is asked to give the name of the file they wish to rename, followed by a space, followed by the new file name. (include extension). Full path of          the original file name to change is required if not in the current directory, however just file name is sufficient for entering the new name.
 #    Cases: Invalid file (file not found): Message indicating invalid file and prompt user if they want to continue the game.
 #
 # 7. Find the number of files with a given extensions type in a directory and all its subdirectories. The user is first asked to give the full path of the directory to search        in. Then, they are prompted to give the extension type they want to search for (ex: .txt). The total number of files with given extension type in each directory is listed.
